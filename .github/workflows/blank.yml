@@ -48,10 +48,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Scan
         uses: GitGuardian/ggshield/actions/iac@main
+        with:
+          args: ./
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
