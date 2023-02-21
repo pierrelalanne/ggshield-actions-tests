@@ -52,6 +52,6 @@ jobs:
       - name: Scan
         uses: GitGuardian/ggshield/actions/iac@main
         with:
-          args: ./
+          args: ./ --debug
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
